@@ -3,7 +3,7 @@ import { formatTimestamp, formatVideoDuration } from "../../helpers/formatFigure
 import { Link, useNavigate } from "react-router-dom";
 import { icons } from "../../assets/icons";
 
-function VideoView({ videos = [], loading = true, fetching = false }) {
+function VideoView({videos = [], loading = true, fetching = false }) {
   const navigate = useNavigate();
 
   if (loading)
