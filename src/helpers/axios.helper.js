@@ -1,9 +1,12 @@
 import axios from "axios";
-import {BASE_URL} from "../constants.js"
+// import { loadProgressBar } from "axios-progress-bar";
+// import "axios-progress-bar/dist/nprogress.css";
 
-const axiosInstance = axios.create();
+const baseURL = "https://backend-playtube.onrender.com/api/v1";
 
-axiosInstance.defaults.baseURL = BASE_URL;
-axiosInstance.defaults.withCredentials = true;
+export const axiosInstance = axios.create({
+  baseURL,
+  withCredentials: true,
+});
 
-export default axiosInstance;
+//  loadProgressBar({}, axiosInstance);
